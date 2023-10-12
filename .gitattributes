@@ -1,2 +1,18 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+class Process {
+    String name;
+    int pid;
+    List<Process> children; // List of processes this process is waiting for
+
+    public Process(String name, int pid) {
+        this.name = name;
+        this.pid = pid;
+        this.children = new ArrayList<>();
+    }
+}
