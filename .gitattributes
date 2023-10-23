@@ -34,11 +34,11 @@ public class DeadlockDetector {
 
         for (Process process : processes) {
             if (!visited.get(process) && isCyclic(process, visited, stack)) {
-                return true; // Deadlock detected
+                return true; 
             }
         }
 
-        return false; // No deadlock detected
+        return false; 
     }
 
     private static boolean isCyclic(Process process, Map<Process, Boolean> visited, Map<Process, Boolean> stack) {
@@ -48,10 +48,10 @@ public class DeadlockDetector {
         for (Process dependency : process.dependencies) {
             if (!visited.get(dependency)) {
                 if (isCyclic(dependency, visited, stack)) {
-                    return true; // Deadlock detected
+                    return true; 
                 }
             } else if (stack.get(dependency)) {
-                return true; // Deadlock detected
+                return true;
             }
         }
 
