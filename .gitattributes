@@ -60,7 +60,6 @@ public class DeadlockDetector {
     }
 
     public static void main(String[] args) {
-        // Create Process instances and define the WAIT-FOR graph
         Process process1 = new Process("Process 1", 1);
         Process process2 = new Process("Process 2", 2);
         Process process3 = new Process("Process 3", 3);
