@@ -1,5 +1,3 @@
-# Auto detect text files and perform LF normalization
-* text=auto
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
